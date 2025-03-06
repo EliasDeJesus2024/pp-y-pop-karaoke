@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karaoke Pip y Pop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1>Bienvenidos al karaoke de Pip y Pop</h1>
+
+    <header class="text-center py-6 bg-purple-500 text-white">
+    <h1 class="text-6xl font-bold">Bienvenidos al karaoke de Pip y Pop</h1>
+    </header>
+
+    <div class="max-w-xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Agregar una canción</h2>
+        
 
     <!--Formulario para agregar canciones-->
 
-    <form id="song_form">
-        <label for="song_name">Nombre de la cancion</label>
-    <input id="song_name" type="text" required>
-    <label for="artist_name">Nombre de el artista</label>
-    <input id="artist_name" type="text" required>
-    <label for="url_song">Ingresa el enlace de la canciones</label>
-    <input id="url_song" type="url" required>
+    <form id="song_form" class="space-y-4">
+<div>
+    <label for="song_name" class="block text-lg font-medium text-gray-700">Nombre de la cancion</label>
+    <input id="song_name" type="text" required  class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
 
-<button type="submit">Agregar en  la lista</button>
+<div>
+    <label for="artist_name" class="block text-lg font-medium text-gray-700">Nombre de el artista</label>
+    <input id="artist_name" type="text" required  class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
+
+<div>
+    <label for="url_song" class="block text-lg font-medium text-gray-700">Ingresa el enlace de la canciones</label>
+    <input id="url_song" type="url" required  class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
+
+<button type="submit" class="w-full py-3 bg-purple-300 text-white rounded-lg hover:bg-purple-600 transition duration-300">
+    Agregar a la lista
+</button>
+
 
     </form>
 
     <!--Lista de canciones-->
-    <h2>Lista de reproducion</h2>
-
-    <ul id="play_list"></ul>
-
+    <div class="max-w-xl mx-auto mt-8">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Lista de reproducción</h2>
+        <ul id="play_list" class="space-y-4"></ul>
+    </div>
+    
     <script src="main.js"></script>
 </body>
 </html>
